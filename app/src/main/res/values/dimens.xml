@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_mid_margin">8dp</dimen>
+    <dimen name="activity_mid_padding">8dp</dimen>
+
+    <dimen name="activity_medium_margin">18dp</dimen>
+    <dimen name="activity_medium_padding">18dp</dimen>
+
+    <dimen name="activity_large_margin">30dp</dimen>
+    <dimen name="activity_large_padding">30dp</dimen>
+
+
+    <dimen name="textSizeSmall">15sp</dimen>
+    <dimen name="textSizeMedium">20sp</dimen>
+    <dimen name="textSizeLarge">26sp</dimen>
+    <dimen name="textSizeHuge">32sp</dimen>
+
+    <dimen name="bottomViewHeight">30dp</dimen>
+    <dimen name="drawerWidth">280dp</dimen>
+</resources>
