@@ -28,7 +28,7 @@ public class SplashActivity extends BaseActivityNoDrawer {
             container.startShimmer();
             startSplash();
         } else {
-            Intent goToLoginActivity = new Intent(SplashActivity.this, Main2Activity.class);
+            Intent goToLoginActivity = new Intent(SplashActivity.this, MainActivity.class);
             goToLoginActivity.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(goToLoginActivity);
             finish();
@@ -44,7 +44,7 @@ public class SplashActivity extends BaseActivityNoDrawer {
                     e.printStackTrace();
                 } finally {
                     splashLoaded = true;
-                    Intent intent = new Intent(SplashActivity.this, Main2Activity.class);
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }
