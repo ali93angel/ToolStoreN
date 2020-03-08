@@ -25,7 +25,6 @@ public class HttpClientWrapper {
     private HttpClientWrapper() {
     }
 
-
     public static <T> void callHttpAsync(Call<T> call, final ICallback callback, final Context context, int dialogType) {
         callHttpAsync(call, callback, context, dialogType, ErrorHandlerType.ordinary);
     }

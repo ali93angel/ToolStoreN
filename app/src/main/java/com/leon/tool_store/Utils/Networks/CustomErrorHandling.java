@@ -18,7 +18,6 @@ import retrofit2.Response;
 public class CustomErrorHandling extends Exception {
     static String errorMessage;
     private static Context context;
-    private int ErrorCode;
 
     public CustomErrorHandling(Context context) {
         CustomErrorHandling.context = context;
@@ -100,7 +99,6 @@ public class CustomErrorHandling extends Exception {
     }
 
     public static class APIError {
-
         private int Status;
         private String Message;
 
