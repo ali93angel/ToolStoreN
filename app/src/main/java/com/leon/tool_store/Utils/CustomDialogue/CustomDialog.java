@@ -11,11 +11,11 @@ import com.leon.tool_store.R;
 
 
 public class CustomDialog {
+
     @SuppressLint("StaticFieldLeak")
     private static LovelyStandardDialog lovelyStandardDialog;
     private Context context;
     private String Top, Title, Message, ButtonText;
-
 
     public CustomDialog(DialogType choose, Context context, String message, String title, String top, String buttonText) {
         this.context = context;
@@ -43,6 +43,17 @@ public class CustomDialog {
             CustomBlueDialog(this.context, ButtonText);
     }
 
+    public CustomDialog(String message, String title, String top,
+                        int positiveButtonColor, int topColor, int topTitleColor) {
+        lovelyStandardDialog = new LovelyStandardDialog(context)
+                .setTitle(title)
+                .setMessage(message)
+                .setTopTitle(top)
+                .setTopColorRes(topColor)
+                .setTopTitleColor(context.getResources().getColor(topTitleColor))
+                .setPositiveButtonColor(context.getResources().getColor(positiveButtonColor));
+    }
+
     private static void CustomBlueDialog(final Context context, String ButtonText) {
         lovelyStandardDialog
                 .setTopColorRes(R.color.blue5)
@@ -63,8 +74,8 @@ public class CustomDialog {
 
     private static void CustomYellowDialog(final Context context, String buttonText) {
         lovelyStandardDialog
-                .setTopTitleColor(context.getResources().getColor(R.color.white))
                 .setTopColorRes(R.color.yellow1)
+                .setTopTitleColor(context.getResources().getColor(R.color.white))
                 .setButtonsBackground(R.drawable.border_yellow_2)
                 .setPositiveButton(buttonText, v -> {
                 })
@@ -94,8 +105,8 @@ public class CustomDialog {
 
     private static void CustomYellowDialogRedirect(final Context context, String buttonText) {
         lovelyStandardDialog
-                .setTopTitleColor(context.getResources().getColor(R.color.white))
                 .setButtonsBackground(R.drawable.border_yellow_2)
+                .setTopTitleColor(context.getResources().getColor(R.color.white))
                 .setTopColorRes(R.color.yellow1)
                 .setPositiveButton(buttonText, v -> {
                     Intent intent = new Intent(context, MainActivity.class);
@@ -114,6 +125,14 @@ public class CustomDialog {
                     context.startActivity(intent);
                 })
                 .show();
+    }
+
+    public static LovelyStandardDialog getLovelyStandardDialog() {
+        return lovelyStandardDialog;
+    }
+
+    public interface Inline {
+        void inline(String negative, int negativeColor);
     }
 }
 

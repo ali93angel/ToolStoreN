@@ -12,4 +12,5 @@ public enum DialogType {
     GreenRedirect,
     YellowRedirect,
     RedRedirect,
+    Inline
 }

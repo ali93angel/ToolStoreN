@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.leon.tool_store">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -27,7 +28,7 @@
             android:theme="@style/AppTheme"
             tools:ignore="InnerclassSeparator" />
         <activity
-            android:name=".Activities.Main2Activity"
+            android:name=".Main2Activity"
             tools:ignore="InnerclassSeparator" />
     </application>
 

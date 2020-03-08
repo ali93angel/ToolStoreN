@@ -118,6 +118,20 @@ public class LovelyStandardDialog extends AbsLovelyDialog<LovelyStandardDialog> 
         return this;
     }
 
+    private LovelyStandardDialog setPositiveButtonsBackgroundRes(int res) {
+        positiveButton.setBackgroundDrawable(context.getResources().getDrawable(res));
+        return this;
+    }
+
+    private LovelyStandardDialog setNetralButtonsBackgroundRes(int res) {
+        neutralButton.setBackgroundDrawable(context.getResources().getDrawable(res));
+        return this;
+    }
+
+    private LovelyStandardDialog setNegativeButtonsBackgroundRes(int res) {
+        negativeButton.setBackgroundDrawable(context.getResources().getDrawable(res));
+        return this;
+    }
     public LovelyStandardDialog setButtonsBackground(int backgroundRes) {
         return setButtonsBackgroundRes(backgroundRes);
     }
