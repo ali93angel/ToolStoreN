@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="radius_large">14dp</dimen>
+    <dimen name="radius_medium">10dp</dimen>
+
+    <dimen name="activity_small_margin">3dp</dimen>
+    <dimen name="activity_small_padding">3dp</dimen>
 
     <dimen name="activity_mid_margin">8dp</dimen>
     <dimen name="activity_mid_padding">8dp</dimen>
