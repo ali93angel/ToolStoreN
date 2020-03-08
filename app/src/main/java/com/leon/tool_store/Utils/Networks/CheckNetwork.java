@@ -1,4 +1,4 @@
-package com.leon.tool_store.Utils;
+package com.leon.tool_store.Utils.Networks;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

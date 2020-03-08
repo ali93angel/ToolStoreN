@@ -4,4 +4,33 @@
     <string name="navigation_drawer_close">بستن منو</string>
     <string name="copy_right">copy right</string>
     <string name="canceled">عملیات متوقف شد.</string>
+    <string name="please_wait">لطفا صبر کنید…</string>
+    <string name="accepted">ادامه</string>
+    <string name="message">پیام</string>
+    <string name="error">خطا</string>
+    <string name="dear_user">مشترک گرامی!</string>
+
+    <string name="all_field_should_filled">همه فیلدها باید پر شود.</string>
+    <string name="error_empty">این فیلد باید پر شود.</string>
+    <string name="error_empty_all">همه فیلد ها خالی است.</string>
+    <string name="error_short_length">.این فیلد کوتاه است</string>
+    <string name="error_similar">شماره پرونده و شماره اشتراک مطابق نیستند.</string>
+    <string name="error_IO">خطا در جابجای اطلاعات، لطفا مجدد تلاش کنید</string>
+    <string name="error_Socket">خطادر ارتباط با سرور، لطفا تنظیمات شبکه خود را بررسی و مجدد تلاش کنید</string>
+    <string name="error_other">جهت ارتباط با پشتیبانی; علت خطا:</string>
+    <string name="error_disconnected">برقراری ارتباط حین جابجایی اطلاعات با خطا مواجه شد</string>
+    <string name="error_is_not_match">نام کاربری و گذرواژه با یکدیگر مطابقت ندارند</string>
+    <string name="error_passwords_is_not_match">گذرواژه و تکرار آن با یکدیکر مطابق نیستند</string>
+    <string name="error_in_record_voice">در ضبظ صدا مشکلی به وجود آمد</string>
+    <string name="error_in_play_voice">در پخش صدا مشکلی به وجود آمد</string>
+    <string name="error_in_format">فرمت وارد نشده نادرست است</string>
+    <string name="error_internal">خطای داخلی سرور، با پشتیبان تماس حاصل فرمایید</string>
+    <string name="error_input">ورودی های خود را چک کنید</string>
+    <string name="error_change_server">سرور در حال تغییرات است، لطفا منتظر بمانید و در صورت برطرف نشدن مشکل با پشتیبان تماس حاصل فرماید</string>
+    <string name="error_user_password">نام کاربری و گذرواژه در سیستم موجود نیست، لطفا در ورود اطلاعات دقت قرمایید</string>
+    <string name="error_not_update1">همکار گرامی لطفا نسخه به روز شده اپلیکیشن را از منوی تنظیمات  بخش به روز رسانی دریافت نمایید</string>
+    <string name="error_not_update2">همکار گرامی لطفا چهت دریافت آخرین نسخه اپلیکیشن با راهبر تماس حاصل فرمایید</string>
+    <string name="error_not_auth">مجوز های شما باطل شده است، از برنامه خارج و مجددا وارد شوید</string>
+    <string name="connect_internet">اینترنت وصل نیست، اینترنت وایفای یا همراه خود را روشن کنید.</string>
+
 </resources>

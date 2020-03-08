@@ -14,9 +14,9 @@ import android.widget.Toast;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.leon.tool_store.BaseItems.BaseActivityDrawer;
-import com.leon.tool_store.Utils.CheckNetwork;
 import com.leon.tool_store.Utils.CustomDialogue.CustomDialog;
 import com.leon.tool_store.Utils.CustomDialogue.LovelyStandardDialog;
+import com.leon.tool_store.Utils.Networks.CheckNetwork;
 
 import java.util.Objects;
 

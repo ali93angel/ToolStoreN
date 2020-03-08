@@ -57,7 +57,6 @@ public final class CustomProgressBar {
             final TextView tv = view.findViewById(R.id.textView_title);
             tv.setText(title);
         }
-
         dialog = new Dialog(context, R.style.NewDialog);
         dialog.setContentView(view);
         Objects.requireNonNull(dialog.getWindow()).setLayout(WindowManager.LayoutParams.MATCH_PARENT,
