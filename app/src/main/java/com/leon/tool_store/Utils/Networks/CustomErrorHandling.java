@@ -72,10 +72,8 @@ public class CustomErrorHandling extends Exception {
             errorMessage = context.getString(R.string.error_change_server);
         } else if (httpResponseCode == 401) {
             errorMessage = context.getString(R.string.error_not_auth);
-        } else if (httpResponseCode == 405) {
-            errorMessage = context.getString(R.string.error_not_update1);
-        } else if (httpResponseCode == 406) {
-            errorMessage = context.getString(R.string.error_not_update2);
+        } else if (httpResponseCode == 405 || httpResponseCode == 406) {
+            errorMessage = context.getString(R.string.error_not_update);
         }
         return errorMessage;
     }
@@ -90,10 +88,8 @@ public class CustomErrorHandling extends Exception {
             errorMessage = context.getString(R.string.error_change_server);
         } else if (httpResponseCode == 401) {
             errorMessage = context.getString(R.string.error_user_password);
-        } else if (httpResponseCode == 405) {
-            errorMessage = context.getString(R.string.error_not_update1);
-        } else if (httpResponseCode == 406) {
-            errorMessage = context.getString(R.string.error_not_update2);
+        } else if (httpResponseCode == 405 || httpResponseCode == 406) {
+            errorMessage = context.getString(R.string.error_not_update);
         }
         return errorMessage;
     }
