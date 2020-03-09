@@ -4,9 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -26,10 +26,10 @@ public abstract class BaseActivityDrawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     @BindView(R.id.toolbar)
     public Toolbar toolbar;
-    @BindView(R.id.right_drawer)
-    ListView drawerList;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
+    @BindView(R.id.main_drawer)
+    NavigationView navigationView;
 
     protected abstract void initialize();
 
@@ -52,12 +52,22 @@ public abstract class BaseActivityDrawer extends AppCompatActivity
 
     @SuppressLint("WrongConstant")
     void initializeBase() {
-        setSupportActionBar(toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         toolbar.setNavigationOnClickListener(view -> drawer.openDrawer(Gravity.START));
-        setSupportActionBar(toolbar);
+        setNavigationViewClickListener();
+    }
+
+    void setNavigationViewClickListener() {
+        navigationView.setNavigationItemSelectedListener(item -> {
+            item.setChecked(true);
+            int id = item.getItemId();
+            return false;
+        });
     }
 
     @Override
@@ -73,5 +83,12 @@ public abstract class BaseActivityDrawer extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 }

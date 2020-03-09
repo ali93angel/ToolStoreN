@@ -128,4 +128,11 @@
     <string name="hint_email_subject">Subject :</string>
     <string name="hint_email_message">Message :</string>
     <string name="button_send">Send</string>
+
+
+    <string name="drawer_visibility">@string/drawer_content_on</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="drawer_content_on">0</string>
+    <string name="drawer_content_off">2</string>
 </resources>
