@@ -17,6 +17,11 @@
         <activity
             android:name=".Activities.SplashActivity"
             tools:ignore="InnerclassSeparator">
+
+        </activity>
+        <activity
+            android:name=".Main2Activity"
+            tools:ignore="InnerclassSeparator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,9 +31,6 @@
         <activity
             android:name=".Activities.MainActivity"
             android:theme="@style/AppTheme"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".Main2Activity"
             tools:ignore="InnerclassSeparator" />
     </application>
 

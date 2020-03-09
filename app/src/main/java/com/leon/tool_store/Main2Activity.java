@@ -4,8 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,19 +32,19 @@ public class Main2Activity extends BaseActivityDrawer {
         parentLayout.addView(childLayout);
         ButterKnife.bind(this);
         context = this;
-        new NetworkUtil().execute();
-        CheckNetwork checkNetwork = new CheckNetwork(context);
-        @SuppressLint("HandlerLeak") Handler handler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                if (msg.what != 1) {
-                    Log.e("result", "// code if not connected");
-                } else {
-                    Log.e("result", "// code if connected");
-                }
-            }
-        };
-        checkNetwork.isNetworkAvailable(handler, 1000);
+//        new NetworkUtil().execute();
+//        CheckNetwork checkNetwork = new CheckNetwork(context);
+//        @SuppressLint("HandlerLeak") Handler handler = new Handler() {
+//            @Override
+//            public void handleMessage(Message msg) {
+//                if (msg.what != 1) {
+//                    Log.e("result", "// code if not connected");
+//                } else {
+//                    Log.e("result", "// code if connected");
+//                }
+//            }
+//        };
+//        checkNetwork.isNetworkAvailable(handler, 1000);
 //        new CustomDialog(DialogType.Green, context, "simpleMessage.getMessage()",
 //                "context.getString(R.string.dear_user)",
 //                "context.getString(R.string.support)", "context.getString(R.string.accepted)");
