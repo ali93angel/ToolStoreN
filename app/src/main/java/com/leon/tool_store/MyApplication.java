@@ -11,6 +11,14 @@ public class MyApplication extends Application {
     static Context context;
     static String fontName = "fonts/Sahel.ttf";
 
+    public static Context getContext() {
+        return context;
+    }
+
+    public static String getFontName() {
+        return fontName;
+    }
+
     @Override
     public void onCreate() {
         context = getApplicationContext();
@@ -22,13 +30,5 @@ public class MyApplication extends Application {
                                 .setFontAttrId(R.attr.fontPath)
                                 .build()))
                 .build());
-    }
-
-    public static Context getContext() {
-        return context;
-    }
-
-    public static String getFontName() {
-        return fontName;
     }
 }

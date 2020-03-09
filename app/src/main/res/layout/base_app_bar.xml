@@ -29,11 +29,10 @@
         android:layout_below="@+id/appBarLayout" />
 
     <include
+        android:id="@+id/footer"
         layout="@layout/footer_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/footer"
-        />
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:id="@+id/splash_activity_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_activity_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context="com.leon.tool_store.Activities.SplashActivity">
 
     <com.facebook.shimmer.ShimmerFrameLayout
@@ -28,6 +28,7 @@
             android:scaleType="centerInside"
             android:src="@drawable/img_splash" />
     </com.facebook.shimmer.ShimmerFrameLayout>
+
     <include
         android:id="@+id/footer"
         layout="@layout/footer_layout"

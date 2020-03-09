@@ -25,6 +25,7 @@ import butterknife.ButterKnife;
 public class Main2Activity extends BaseActivityDrawer {
 
     Context context;
+
     @Override
     protected void initialize() {
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
