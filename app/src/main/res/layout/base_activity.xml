@@ -19,9 +19,9 @@
         android:layout_width="@dimen/nav_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/transparent"
+        android:background="?attr/colorAccent"
         android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_drawer_header"
         app:menu="@menu/menu_drawer" />
-    <!--        app:headerLayout="@layout/nav_drawer_header"-->
-
+    <!--    android:background="@android:color/transparent"-->
 </androidx.drawerlayout.widget.DrawerLayout>
