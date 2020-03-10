@@ -7,7 +7,6 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -23,14 +22,9 @@ import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public abstract class BaseActivityDrawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    //    @BindView(R.id.toolbar)
     public Toolbar toolbar;
-    //    @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
-    //    @BindView(R.id.main_drawer)
     NavigationView navigationView;
-    //    @BindView(R.id.textView_developer)
-    TextView textViewDeveloper;
 
     protected abstract void initialize();
 
@@ -56,14 +50,12 @@ public abstract class BaseActivityDrawer extends AppCompatActivity
         toolbar = findViewById(R.id.toolbar);
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.main_drawer);
-        textViewDeveloper = findViewById(R.id.textView_developer);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-//        textViewDeveloper.setText(R.string.app_email);
         toolbar.setNavigationOnClickListener(view -> drawer.openDrawer(Gravity.START));
         setNavigationViewClickListener();
     }

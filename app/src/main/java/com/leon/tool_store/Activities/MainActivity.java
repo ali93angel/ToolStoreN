@@ -2,11 +2,9 @@ package com.leon.tool_store.Activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.widget.Toast;
 
 import com.leon.tool_store.BaseItems.BaseActivityNoDrawer;
 import com.leon.tool_store.R;
-import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
 import com.nightonke.boommenu.BoomButtons.TextOutsideCircleButton;
 import com.nightonke.boommenu.BoomMenuButton;
 
@@ -35,27 +33,23 @@ public class MainActivity extends BaseActivityNoDrawer {
                     .normalImageRes(R.drawable.ic_checkout_circle)
 //                    .normalText("Butter Doesn't fly!")
                     .normalText(menu[i])
-                    .listener(new OnBMClickListener() {
-                        @Override
-                        public void onBoomButtonClick(int index) {
-                            Toast.makeText(context, "Clicked " + index, Toast.LENGTH_SHORT).show();
-                            Intent intent;
-                            switch (index) {
-                                case 0:
-                                    break;
-                                case 1:
-                                    break;
-                                case 2:
-                                    break;
-                                case 3:
-                                    break;
-                                case 4:
-                                    break;
-                                case 5:
-                                    intent = new Intent(getApplicationContext(), AboutActivity.class);
-                                    startActivity(intent);
-                                    break;
-                            }
+                    .listener(index -> {
+                        Intent intent;
+                        switch (index) {
+                            case 0:
+                                break;
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                            case 3:
+                                break;
+                            case 4:
+                                break;
+                            case 5:
+                                intent = new Intent(getApplicationContext(), AboutActivity.class);
+                                startActivity(intent);
+                                break;
                         }
                     });
             bmb.addBuilder(builder);

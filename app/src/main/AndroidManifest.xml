@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.AboutActivity"></activity>
+        <activity
+            android:name=".Activities.AboutActivity"
+            android:label="@string/menu_about"></activity>
         <activity
             android:name=".Activities.SplashActivity"
             tools:ignore="InnerclassSeparator">
