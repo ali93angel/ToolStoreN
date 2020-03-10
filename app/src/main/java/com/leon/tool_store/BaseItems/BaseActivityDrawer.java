@@ -19,19 +19,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.leon.tool_store.R;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 
 public abstract class BaseActivityDrawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    @BindView(R.id.toolbar)
+    //    @BindView(R.id.toolbar)
     public Toolbar toolbar;
-    @BindView(R.id.drawer_layout)
+    //    @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
-    @BindView(R.id.main_drawer)
+    //    @BindView(R.id.main_drawer)
     NavigationView navigationView;
-    @BindView(R.id.textView_developer)
+    //    @BindView(R.id.textView_developer)
     TextView textViewDeveloper;
 
     protected abstract void initialize();
@@ -48,20 +46,24 @@ public abstract class BaseActivityDrawer extends AppCompatActivity
         getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         overridePendingTransition(R.anim.slide_up_info, R.anim.no_change);
         setContentView(R.layout.base_activity);
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
         initializeBase();
         initialize();
     }
 
     @SuppressLint("WrongConstant")
     void initializeBase() {
+        toolbar = findViewById(R.id.toolbar);
+        drawer = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.main_drawer);
+        textViewDeveloper = findViewById(R.id.textView_developer);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        textViewDeveloper.setText(R.string.app_email);
+//        textViewDeveloper.setText(R.string.app_email);
         toolbar.setNavigationOnClickListener(view -> drawer.openDrawer(Gravity.START));
         setNavigationViewClickListener();
     }

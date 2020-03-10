@@ -42,4 +42,7 @@
     <color name="text_color1">#92abca</color>
     <color name="text_color2">#575757</color>
     <color name="text_color3">#423F3F</color>
+
+
+    <color name="background_color">#f2f2f2</color>
 </resources>
