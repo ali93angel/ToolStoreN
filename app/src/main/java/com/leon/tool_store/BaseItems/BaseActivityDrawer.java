@@ -40,7 +40,6 @@ public abstract class BaseActivityDrawer extends AppCompatActivity
         getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         overridePendingTransition(R.anim.slide_up_info, R.anim.no_change);
         setContentView(R.layout.base_activity);
-//        ButterKnife.bind(this);
         initializeBase();
         initialize();
     }
@@ -63,6 +62,7 @@ public abstract class BaseActivityDrawer extends AppCompatActivity
     void setNavigationViewClickListener() {
         navigationView.setNavigationItemSelectedListener(item -> {
             item.setChecked(true);
+            drawer.closeDrawer(GravityCompat.START);
             int id = item.getItemId();
             return false;
         });

@@ -37,8 +37,6 @@ public class MainActivity extends BaseActivityNoDrawer {
                     .listener(index -> {
                         Intent intent;
                         switch (index) {
-                            case 0:
-                                break;
                             case 1:
                                 intent = new Intent(getApplicationContext(), CartActivity.class);
                                 startActivity(intent);
@@ -46,8 +44,6 @@ public class MainActivity extends BaseActivityNoDrawer {
                             case 2:
                                 intent = new Intent(getApplicationContext(), CheckoutActivity.class);
                                 startActivity(intent);
-                                break;
-                            case 3:
                                 break;
                             case 4:
                                 intent = new Intent(getApplicationContext(), ProfileActivity.class);

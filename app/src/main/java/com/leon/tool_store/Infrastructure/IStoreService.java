@@ -1,5 +1,5 @@
 package com.leon.tool_store.Infrastructure;
 
-public interface IAbfaService {
+public interface IStoreService {
 
 }
