@@ -21,8 +21,8 @@ public class AboutActivity extends BaseActivityDrawer {
     Context context;
     @BindView(R.id.list)
     ListView list;
-    String[] titleId;//= getResources().getStringArray(R.array.title);
-    String[] subtitleId;//= getResources().getStringArray(R.array.subtitle);
+    String[] titleId;
+    String[] subtitleId;
     Integer[] imageId = {
             R.drawable.ic_other_appname,
             R.drawable.ic_other_build,
@@ -41,12 +41,12 @@ public class AboutActivity extends BaseActivityDrawer {
         parentLayout.addView(childLayout);
         ButterKnife.bind(this);
         context = this;
-        titleId = getResources().getStringArray(R.array.title);
-        subtitleId = getResources().getStringArray(R.array.subtitle);
         initializeListView();
     }
 
     void initializeListView() {
+        titleId = getResources().getStringArray(R.array.title);
+        subtitleId = getResources().getStringArray(R.array.subtitle);
         AdapterList adapter = new AdapterList(AboutActivity.this, titleId, subtitleId, imageId);
         list.setAdapter(adapter);
     }

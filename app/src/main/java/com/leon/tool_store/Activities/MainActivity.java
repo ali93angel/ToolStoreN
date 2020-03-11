@@ -39,8 +39,12 @@ public class MainActivity extends BaseActivityNoDrawer {
                             case 0:
                                 break;
                             case 1:
+                                intent = new Intent(getApplicationContext(), CartActivity.class);
+                                startActivity(intent);
                                 break;
                             case 2:
+                                intent = new Intent(getApplicationContext(), CheckoutActivity.class);
+                                startActivity(intent);
                                 break;
                             case 3:
                                 break;

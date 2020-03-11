@@ -2,6 +2,7 @@ package com.leon.tool_store.Utils.Networks;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.leon.tool_store.Config;
 
 import java.util.concurrent.TimeUnit;
 
@@ -45,7 +46,7 @@ public class NetworkHelper {
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
-        String baseUrl = "http://37.191.92.130/";
+        String baseUrl = Config.ADMIN_PANEL_URL;
         return new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .client(NetworkHelper.getHttpClient())
