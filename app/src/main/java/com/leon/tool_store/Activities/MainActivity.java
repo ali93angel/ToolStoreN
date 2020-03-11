@@ -18,7 +18,7 @@ public class MainActivity extends BaseActivityNoDrawer {
     Context context;
     @BindView(R.id.bmb)
     BoomMenuButton bmb;
-    String[] menu;// = getResources().getStringArray(R.array.menu);
+    String[] menu;
 
     @Override
     protected void initialize() {
@@ -33,7 +33,6 @@ public class MainActivity extends BaseActivityNoDrawer {
         for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++) {
             TextOutsideCircleButton.Builder builder = new TextOutsideCircleButton.Builder()
                     .normalImageRes(R.drawable.ic_checkout_circle)
-//                    .normalText("Butter Doesn't fly!")
                     .normalText(menu[i])
                     .listener(index -> {
                         Intent intent;
@@ -75,26 +74,20 @@ public class MainActivity extends BaseActivityNoDrawer {
     class ShowDialogue implements CustomDialog.Inline {
         private LovelyStandardDialog lovelyStandardDialog;
 
-        ShowDialogue(String message, String title, String top,
-                     String positiveButtonText, String negativeButtonText,
-                     int positiveButtonColor, int negativeButtonColor,
-                     int topColor, int topTitleColor) {
+        ShowDialogue(String message, String title, String top, String positiveButtonText, String negativeButtonText,
+                     int positiveButtonColor, int negativeButtonColor, int topColor, int topTitleColor) {
             lovelyStandardDialog = new LovelyStandardDialog(context)
                     .setTitle(title).setMessage(message).setTopTitle(top).setTopColorRes(topColor)
                     .setTopTitleColor(getResources().getColor(topTitleColor))
                     .setPositiveButtonColor(getResources().getColor(positiveButtonColor))
-                    .setPositiveButton(positiveButtonText, v -> {
-                        finishAffinity();
-                    });
+                    .setPositiveButton(positiveButtonText, v -> finishAffinity());
             inline(negativeButtonText, negativeButtonColor);
         }
 
         @Override
         public void inline(String negative, int negativeColor) {
             lovelyStandardDialog.setNegativeButtonColor(getResources().getColor(negativeColor))
-                    .setNegativeButton(negative, v -> {
-                        lovelyStandardDialog.dismiss();
-                    }).show();
+                    .setNegativeButton(negative, v -> lovelyStandardDialog.dismiss()).show();
         }
     }
 }
