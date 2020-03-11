@@ -15,12 +15,30 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.ProfileActivity"></activity>
-        <activity android:name=".Activities.CheckoutActivity" />
-        <activity android:name=".Activities.CartActivity" />
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:label="@string/menu_profile"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activities.CheckoutActivity"
+            android:label="@string/menu_checkout"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activities.CartActivity"
+            android:label="@string/menu_cart"
+            tools:ignore="InnerclassSeparator" />
         <activity
             android:name=".Activities.AboutActivity"
-            android:label="@string/menu_about" />
+            android:label="@string/menu_about"
+            tools:ignore="InnerclassSeparator" />
+
+        <activity
+            android:name=".Main2Activity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:theme="@style/AppTheme"
+            tools:ignore="InnerclassSeparator" />
         <activity
             android:name=".Activities.SplashActivity"
             tools:ignore="InnerclassSeparator">
@@ -30,13 +48,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Main2Activity"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".Activities.MainActivity"
-            android:theme="@style/AppTheme"
-            tools:ignore="InnerclassSeparator" />
     </application>
 
 </manifest>
