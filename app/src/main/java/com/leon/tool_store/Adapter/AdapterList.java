@@ -32,7 +32,7 @@ public class AdapterList extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View view, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        @SuppressLint("ViewHolder") View rowView = inflater.inflate(R.layout.lsv_item_about, null, true);
+        @SuppressLint({"ViewHolder", "InflateParams"}) View rowView = inflater.inflate(R.layout.lsv_item_about, null, true);
 
         TextView title = rowView.findViewById(R.id.title);
         TextView subtitle = rowView.findViewById(R.id.subtitle);
