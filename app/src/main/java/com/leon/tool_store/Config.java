@@ -1,14 +1,14 @@
 package com.leon.tool_store;
 
-public class Config {
+import android.annotation.SuppressLint;
 
-    // API URL configuration
+public class Config {
     public static String ADMIN_PANEL_URL = "http://www.dimasword.com/demo/ecommerce";
 
-    // change this access similar with accesskey in admin panel for security reason
     public static String AccessKey = "12345";
 
-    // database path configuration
+    @SuppressLint("SdCardPath")
     public static String DBPath = "/data/data/com.leon.tool_store/databases/";
 
+    static String fontName = "fonts/Sahel.ttf";
 }
