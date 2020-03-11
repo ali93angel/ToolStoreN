@@ -135,6 +135,10 @@
     <string name="drawer_close">Slider Menu Closed</string>
     <string name="drawer_content_on">0</string>
     <string name="drawer_content_off">2</string>
+    <string name="exit">خروج</string>
+    <string name="exit_question">میخواهید خارج شوید؟</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
 
 
 </resources>

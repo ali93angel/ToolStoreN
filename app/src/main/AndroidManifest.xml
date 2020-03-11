@@ -34,7 +34,7 @@
 
         <activity
             android:name=".Main2Activity"
-            tools:ignore="InnerclassSeparator" />
+            tools:ignore="InnerclassSeparator"></activity>
         <activity
             android:name=".Activities.MainActivity"
             android:theme="@style/AppTheme"

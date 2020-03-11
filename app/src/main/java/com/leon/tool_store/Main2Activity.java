@@ -50,9 +50,9 @@ public class Main2Activity extends BaseActivityDrawer {
 //                "context.getString(R.string.support)", "context.getString(R.string.accepted)");
 //        ShowDialogue showDialogue1 = new ShowDialogue("test1", "test2", "test3",
 //                R.color.blue2, "test4", R.color.green2, R.color.red1);
-//        ShowDialogue showDialogue2 = new ShowDialogue("test1", "test2", "test3",
-//                R.color.black, "test5",
-//                R.color.blue2, "test4", R.color.green2, R.color.red1);
+        ShowDialogue showDialogue2 = new ShowDialogue("test1", "test2", "test3",
+                R.color.black, "test5",
+                R.color.blue2, "test4", R.color.green2, R.color.red1);
 
     }
 
