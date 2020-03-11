@@ -49,6 +49,8 @@ public class MainActivity extends BaseActivityNoDrawer {
                             case 3:
                                 break;
                             case 4:
+                                intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                                startActivity(intent);
                                 break;
                             case 5:
                                 intent = new Intent(getApplicationContext(), AboutActivity.class);

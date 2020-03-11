@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.CheckoutActivity"></activity>
+        <activity android:name=".Activities.ProfileActivity"></activity>
+        <activity android:name=".Activities.CheckoutActivity" />
         <activity android:name=".Activities.CartActivity" />
         <activity
             android:name=".Activities.AboutActivity"
