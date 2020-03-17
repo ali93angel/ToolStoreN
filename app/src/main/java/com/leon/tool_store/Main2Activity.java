@@ -9,8 +9,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.paging.PagedList;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.leon.tool_store.Adapter.Item.Item;
+import com.leon.tool_store.Adapter.Item.ItemAdapter;
+import com.leon.tool_store.Adapter.Item.ItemViewModel;
 import com.leon.tool_store.BaseItems.BaseActivityDrawer;
 import com.leon.tool_store.Utils.CustomDialogue.CustomDialog;
 import com.leon.tool_store.Utils.CustomDialogue.LovelyStandardDialog;
@@ -24,6 +33,8 @@ public class Main2Activity extends BaseActivityDrawer {
 
     Context context;
 
+    private RecyclerView recyclerView;
+
     @Override
     protected void initialize() {
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
@@ -32,6 +43,30 @@ public class Main2Activity extends BaseActivityDrawer {
         parentLayout.addView(childLayout);
         ButterKnife.bind(this);
         context = this;
+
+        recyclerView = findViewById(R.id.recyclerview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+
+        //getting our ItemViewModel
+        ItemViewModel itemViewModel = ViewModelProviders.of(this).get(ItemViewModel.class);
+
+        //creating the Adapter
+        final ItemAdapter adapter = new ItemAdapter(this);
+
+//        observing the itemPagedList from view model
+        itemViewModel.itemPagedList.observe(this, new Observer<PagedList<Item>>() {
+            @Override
+            public void onChanged(@Nullable PagedList<Item> items) {
+                //in case of any changes
+                //submitting the items to adapter
+                adapter.submitList(items);
+            }
+        });
+
+        //setting the adapter
+        recyclerView.setAdapter(adapter);
+
 //        new NetworkUtil().execute();
 //        CheckNetwork checkNetwork = new CheckNetwork(context);
 //        @SuppressLint("HandlerLeak") Handler handler = new Handler() {
@@ -50,9 +85,9 @@ public class Main2Activity extends BaseActivityDrawer {
 //                "context.getString(R.string.support)", "context.getString(R.string.accepted)");
 //        ShowDialogue showDialogue1 = new ShowDialogue("test1", "test2", "test3",
 //                R.color.blue2, "test4", R.color.green2, R.color.red1);
-        ShowDialogue showDialogue2 = new ShowDialogue("test1", "test2", "test3",
-                R.color.black, "test5",
-                R.color.blue2, "test4", R.color.green2, R.color.red1);
+//        ShowDialogue showDialogue2 = new ShowDialogue("test1", "test2", "test3",
+//                R.color.black, "test5",
+//                R.color.blue2, "test4", R.color.green2, R.color.red1);
 
     }
 

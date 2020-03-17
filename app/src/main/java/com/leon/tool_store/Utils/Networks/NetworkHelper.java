@@ -3,6 +3,7 @@ package com.leon.tool_store.Utils.Networks;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.leon.tool_store.Config;
+import com.leon.tool_store.Infrastructure.IStoreService;
 
 import java.util.concurrent.TimeUnit;
 
@@ -48,10 +49,13 @@ public class NetworkHelper {
                 .create();
         String baseUrl = Config.ADMIN_PANEL_URL;
         return new Retrofit.Builder()
-                .baseUrl(baseUrl)
+                .baseUrl("https://api.stackexchange.com/2.2/")
                 .client(NetworkHelper.getHttpClient())
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }
 
+    public static IStoreService getApi() {
+        return getInstance().create(IStoreService.class);
+    }
 }

@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="radius_large">14dp</dimen>
-    <dimen name="radius_medium">10dp</dimen>
+    <!--    <dimen name="radius_large">14dp</dimen>-->
+    <!--    <dimen name="radius_medium">10dp</dimen>-->
 
-    <dimen name="activity_small_margin">3dp</dimen>
-    <dimen name="activity_small_padding">3dp</dimen>
+    <!--    <dimen name="activity_small_margin">3dp</dimen>-->
+    <!--    <dimen name="activity_small_padding">3dp</dimen>-->
 
-    <dimen name="activity_mid_margin">8dp</dimen>
-    <dimen name="activity_mid_padding">8dp</dimen>
+    <!--    <dimen name="activity_mid_margin">8dp</dimen>-->
+    <!--    <dimen name="activity_mid_padding">8dp</dimen>-->
 
-    <dimen name="activity_medium_margin">18dp</dimen>
-    <dimen name="activity_medium_padding">18dp</dimen>
+    <!--    <dimen name="activity_medium_margin">18dp</dimen>-->
+    <!--    <dimen name="activity_medium_padding">18dp</dimen>-->
 
-    <dimen name="activity_large_margin">30dp</dimen>
-    <dimen name="activity_large_padding">30dp</dimen>
+    <!--    <dimen name="activity_large_margin">30dp</dimen>-->
+    <!--    <dimen name="activity_large_padding">30dp</dimen>-->
 
 
-    <dimen name="textSizeSmall">15sp</dimen>
-    <dimen name="textSizeMedium">20sp</dimen>
-    <dimen name="textSizeLarge">26sp</dimen>
-    <dimen name="textSizeHuge">32sp</dimen>
+    <!--    <dimen name="textSizeSmall">15sp</dimen>-->
+    <!--    <dimen name="textSizeMedium">20sp</dimen>-->
+    <!--    <dimen name="textSizeLarge">26sp</dimen>-->
+    <!--    <dimen name="textSizeHuge">32sp</dimen>-->
+
+    <!--    <dimen name="bottomViewHeight">30dp</dimen>-->
+    <!--    <dimen name="drawerWidth">280dp</dimen>-->
+    <!--    <dimen name="nav_width">280dp</dimen>-->
+
+    <dimen name="radius_large">@dimen/_14sdp</dimen>
+    <dimen name="radius_medium">@dimen/_10sdp</dimen>
+
+    <dimen name="activity_small_margin">@dimen/_3sdp</dimen>
+    <dimen name="activity_small_padding">@dimen/_3sdp</dimen>
+
+    <dimen name="activity_mid_margin">@dimen/_8sdp</dimen>
+    <dimen name="activity_mid_padding">@dimen/_8sdp</dimen>
+
+    <dimen name="activity_medium_margin">@dimen/_18sdp</dimen>
+    <dimen name="activity_medium_padding">@dimen/_18sdp</dimen>
+
+    <dimen name="activity_large_margin">@dimen/_30sdp</dimen>
+    <dimen name="activity_large_padding">@dimen/_30sdp</dimen>
+
+
+    <dimen name="textSizeSmall">@dimen/_15ssp</dimen>
+    <dimen name="textSizeMedium">@dimen/_20ssp</dimen>
+    <dimen name="textSizeLarge">@dimen/_26ssp</dimen>
+    <dimen name="textSizeHuge">@dimen/_32ssp</dimen>
 
     <dimen name="bottomViewHeight">30dp</dimen>
     <dimen name="drawerWidth">280dp</dimen>
