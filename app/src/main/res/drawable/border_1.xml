@@ -8,6 +8,6 @@
         android:top="@dimen/activity_small_padding" />
     <solid android:color="@android:color/transparent" />
     <stroke
-        android:width="2dp"
+        android:width="@dimen/_2sdp"
         android:color="@color/gray2" />
 </shape>

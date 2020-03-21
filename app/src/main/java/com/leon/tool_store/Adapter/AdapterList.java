@@ -21,7 +21,7 @@ public class AdapterList extends ArrayAdapter<String> {
     private final Integer[] imageId;
 
     public AdapterList(Activity context, String[] titleId, String[] subtitleId, Integer[] imageId) {
-        super(context, R.layout.lsv_item_about, titleId);
+        super(context, R.layout.about_list_view_item_, titleId);
         this.context = context;
         this.titleId = titleId;
         this.subtitleId = subtitleId;
@@ -32,7 +32,7 @@ public class AdapterList extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View view, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        @SuppressLint({"ViewHolder", "InflateParams"}) View rowView = inflater.inflate(R.layout.lsv_item_about, null, true);
+        @SuppressLint({"ViewHolder", "InflateParams"}) View rowView = inflater.inflate(R.layout.about_list_view_item_, null, true);
 
         TextView title = rowView.findViewById(R.id.title);
         TextView subtitle = rowView.findViewById(R.id.subtitle);

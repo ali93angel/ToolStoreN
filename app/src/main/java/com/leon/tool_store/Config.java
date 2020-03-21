@@ -10,5 +10,5 @@ public class Config {
     @SuppressLint("SdCardPath")
     public static final String DBPath = "/data/data/com.leon.tool_store/databases/";
 
-    static final String fontName = "fonts/Sahel.ttf";
+    static final String fontName = "fonts/sahel.ttf";
 }

@@ -23,5 +23,4 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_drawer_header"
         app:menu="@menu/menu_drawer" />
-    <!--    android:background="@android:color/transparent"-->
 </androidx.drawerlayout.widget.DrawerLayout>
