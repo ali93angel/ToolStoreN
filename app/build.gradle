@@ -39,6 +39,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    //TODO به روز رسانی نشود
     //noinspection GradleCompatible
     implementation 'com.google.android.material:material:1.2.0-alpha02'
 
@@ -57,6 +58,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.retrofit2:retrofit:2.7.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    //TODO به روز رسانی نشود
     implementation 'com.squareup.okhttp3:logging-interceptor:3.12.3'
     implementation 'androidx.navigation:navigation-ui:2.2.1'
 
@@ -78,6 +80,10 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     implementation 'com.nightonke:boommenu:2.1.1'
+    implementation 'com.ramotion.circlemenu:circle-menu:0.3.2'
+//    implementation 'com.github.safetysystemtechnology:CircleMenu:1.0.9'
+    //noinspection GradleCompatible
+    implementation 'com.github.clans:fab:1.6.4'
 
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'

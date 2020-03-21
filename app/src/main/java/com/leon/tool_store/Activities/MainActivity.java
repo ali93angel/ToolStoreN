@@ -2,6 +2,9 @@ package com.leon.tool_store.Activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import com.leon.tool_store.BaseItems.BaseActivityNoDrawer;
 import com.leon.tool_store.R;
@@ -9,6 +12,7 @@ import com.leon.tool_store.Utils.CustomDialogue.CustomDialog;
 import com.leon.tool_store.Utils.CustomDialogue.LovelyStandardDialog;
 import com.nightonke.boommenu.BoomButtons.TextOutsideCircleButton;
 import com.nightonke.boommenu.BoomMenuButton;
+import com.ramotion.circlemenu.CircleMenuView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,23 +21,73 @@ import butterknife.ButterKnife;
 public class MainActivity extends BaseActivityNoDrawer {
     Context context;
     @BindView(R.id.bmb)
-    BoomMenuButton bmb;
-    String[] menu;
+    BoomMenuButton boomMenuButton;
+    String[] menuItem;
+    @BindView(R.id.circle_menu)
+    CircleMenuView circleMenuView;
 
     @Override
     protected void initialize() {
         setContentView(R.layout.main_activity);
         ButterKnife.bind(this);
         context = this;
-        menu = getResources().getStringArray(R.array.menu);
+        menuItem = getResources().getStringArray(R.array.menu);
         initializeMenu();
     }
 
     void initializeMenu() {
-        for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++) {
+        circleMenuView.setEventListener(new CircleMenuView.EventListener() {
+            @Override
+            public void onMenuOpenAnimationStart(@NonNull CircleMenuView view) {
+                Log.e("D", "onMenuOpenAnimationStart");
+            }
+
+            @Override
+            public void onMenuOpenAnimationEnd(@NonNull CircleMenuView view) {
+                Log.e("D", "onMenuOpenAnimationEnd");
+            }
+
+            @Override
+            public void onMenuCloseAnimationStart(@NonNull CircleMenuView view) {
+                Log.e("D", "onMenuCloseAnimationStart");
+            }
+
+            @Override
+            public void onMenuCloseAnimationEnd(@NonNull CircleMenuView view) {
+                Log.e("D", "onMenuCloseAnimationEnd");
+            }
+
+            @Override
+            public void onButtonClickAnimationStart(@NonNull CircleMenuView view, int index) {
+                Log.e("D", "onButtonClickAnimationStart| index: " + index);
+            }
+
+            @Override
+            public void onButtonClickAnimationEnd(@NonNull CircleMenuView view, int index) {
+                Log.e("D", "onButtonClickAnimationEnd| index: " + index);
+            }
+
+            @Override
+            public boolean onButtonLongClick(@NonNull CircleMenuView view, int index) {
+                Log.e("D", "onButtonLongClick| index: " + index);
+                return true;
+            }
+
+            @Override
+            public void onButtonLongClickAnimationStart(@NonNull CircleMenuView view, int index) {
+                Log.e("D", "onButtonLongClickAnimationStart| index: " + index);
+            }
+
+            @Override
+            public void onButtonLongClickAnimationEnd(@NonNull CircleMenuView view, int index) {
+                Log.e("D", "onButtonLongClickAnimationEnd| index: " + index);
+            }
+        });
+
+        for (int i = 0; i < boomMenuButton.getPiecePlaceEnum().pieceNumber(); i++) {
             TextOutsideCircleButton.Builder builder = new TextOutsideCircleButton.Builder()
                     .normalImageRes(R.drawable.ic_checkout_circle)
-                    .normalText(menu[i])
+                    .normalText(menuItem[i])
                     .listener(index -> {
                         Intent intent;
                         switch (index) {
@@ -55,7 +109,7 @@ public class MainActivity extends BaseActivityNoDrawer {
                                 break;
                         }
                     });
-            bmb.addBuilder(builder);
+            boomMenuButton.addBuilder(builder);
         }
     }
 
