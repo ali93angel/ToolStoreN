@@ -5,7 +5,9 @@
     android:id="@+id/main_activity_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     tools:context=".Activities.MainActivity">
+
 
     <com.ramotion.circlemenu.CircleMenuView
         android:id="@+id/circle_menu"
@@ -23,7 +25,7 @@
         android:id="@+id/menu_red"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -59,6 +61,13 @@
             app:bmb_piecePlaceEnum="piecePlace_dot_6_1" />
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@{test12.test1}"
+        android:textSize="@dimen/_100sdp" />
 
     <include
         android:id="@+id/footer"

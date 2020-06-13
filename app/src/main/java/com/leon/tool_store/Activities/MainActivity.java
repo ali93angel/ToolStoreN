@@ -3,6 +3,7 @@ package com.leon.tool_store.Activities;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 
@@ -10,33 +11,36 @@ import com.leon.tool_store.BaseItems.BaseActivityNoDrawer;
 import com.leon.tool_store.R;
 import com.leon.tool_store.Utils.CustomDialogue.CustomDialog;
 import com.leon.tool_store.Utils.CustomDialogue.LovelyStandardDialog;
+import com.leon.tool_store.databinding.ActivityMainBinding;
+import com.leon.tool_store.test;
 import com.nightonke.boommenu.BoomButtons.TextOutsideCircleButton;
-import com.nightonke.boommenu.BoomMenuButton;
 import com.ramotion.circlemenu.CircleMenuView;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 
 public class MainActivity extends BaseActivityNoDrawer {
+    ActivityMainBinding binding;
     Context context;
-    @BindView(R.id.bmb)
-    BoomMenuButton boomMenuButton;
+    //    @BindView(R.id.bmb)
+//    BoomMenuButton boomMenuButton;
     String[] menuItem;
-    @BindView(R.id.circle_menu)
-    CircleMenuView circleMenuView;
+    //    @BindView(R.id.circle_menu)
+//    CircleMenuView circleMenuView;
+    com.leon.tool_store.test test;
 
     @Override
     protected void initialize() {
-        setContentView(R.layout.main_activity);
-        ButterKnife.bind(this);
+        test = new test();
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
+//        ButterKnife.bind(this);
         context = this;
         menuItem = getResources().getStringArray(R.array.menu);
         initializeMenu();
     }
 
     void initializeMenu() {
-        circleMenuView.setEventListener(new CircleMenuView.EventListener() {
+        binding.circleMenu.setEventListener(new CircleMenuView.EventListener() {
             @Override
             public void onMenuOpenAnimationStart(@NonNull CircleMenuView view) {
                 Log.e("D", "onMenuOpenAnimationStart");
@@ -84,7 +88,7 @@ public class MainActivity extends BaseActivityNoDrawer {
             }
         });
 
-        for (int i = 0; i < boomMenuButton.getPiecePlaceEnum().pieceNumber(); i++) {
+        for (int i = 0; i < binding.bmb.getPiecePlaceEnum().pieceNumber(); i++) {
             TextOutsideCircleButton.Builder builder = new TextOutsideCircleButton.Builder()
                     .normalImageRes(R.drawable.ic_checkout_circle)
                     .normalText(menuItem[i])
@@ -109,7 +113,7 @@ public class MainActivity extends BaseActivityNoDrawer {
                                 break;
                         }
                     });
-            boomMenuButton.addBuilder(builder);
+            binding.bmb.addBuilder(builder);
         }
     }
 

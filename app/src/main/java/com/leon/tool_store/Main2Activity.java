@@ -24,27 +24,31 @@ import com.leon.tool_store.BaseItems.BaseActivityDrawer;
 import com.leon.tool_store.Utils.CustomDialogue.CustomDialog;
 import com.leon.tool_store.Utils.CustomDialogue.LovelyStandardDialog;
 import com.leon.tool_store.Utils.Networks.CheckNetwork;
-
-import java.util.Objects;
+import com.leon.tool_store.databinding.ActivityMain2Binding;
 
 import butterknife.ButterKnife;
 
 public class Main2Activity extends BaseActivityDrawer {
 
+    ActivityMain2Binding binding;
     Context context;
-
+    View childLayout;
     private RecyclerView recyclerView;
 
     @Override
     protected void initialize() {
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
-        View childLayout = Objects.requireNonNull(inflater).inflate(R.layout.main2_activity, findViewById(R.id.main_activity_parent));
+
+        binding = ActivityMain2Binding.inflate(getLayoutInflater());
+//        View childLayout = Objects.requireNonNull(inflater).inflate(R.layout.activity_main2, findViewById(R.id.main_activity_parent));
+        childLayout = binding.getRoot();
         @SuppressLint("CutPasteId") ConstraintLayout parentLayout = findViewById(R.id.base_Content);
         parentLayout.addView(childLayout);
         ButterKnife.bind(this);
         context = this;
 
-        recyclerView = findViewById(R.id.recyclerview);
+//        recyclerView = findViewById(R.id.recyclerview);
+        recyclerView = binding.recyclerview;
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
